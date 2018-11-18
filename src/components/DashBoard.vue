@@ -10,9 +10,12 @@
                 <input v-model="username" @keypress.enter="get" type="text" class="form-control" id="inlineFormInputGroup" placeholder="Twitch Channel">
             </div>
         </div>
-    
-        <Vprofile class="col-2 ml-4 bg-dark"/>
-        
+        <div class="container-fluid">
+            <div v-if="!this.$parent.displayform" id="info" class="row">
+                <Vprofile class="col-2 ml-4 mt-4"/>
+                <Vchart class="col-6 mt-4 bg-dark"></Vchart>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -20,7 +23,9 @@
 /* eslint-disable */
 import header from './Vheader.vue';
 import profile from './Vprofile.vue';
+import chart from './Vchart.vue';
 import twitch from "../api/twitch";
+
 
 const axios = require('axios');
 export default {
@@ -28,6 +33,7 @@ export default {
     components: {
         Vheader: header,
         Vprofile: profile,
+        Vchart: chart,
     },
     data() {
         return {
@@ -36,11 +42,15 @@ export default {
             userid: '',
             username: '',
             json: {},
-            arrow: "<"
+            arrow: "<",
+            viewersdata: [],
+            isLive: false,
+            minutes: [],
+            timeout: 60000,
         }
     },
     created: function() {
-        this.url = "users?login=";;
+        this.url = "users?login=";
     },
     methods: {
         get: function() {
@@ -54,7 +64,6 @@ export default {
                     this.json = response.data.data;
                     this.userid = this.json[0]['id'];
                     console.log("display informations about " + this.username);
-                    console.log(this.json);
                     this.$parent.displayform = false;
                 })
                 .catch(e => {

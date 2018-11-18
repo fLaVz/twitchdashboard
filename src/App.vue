@@ -11,7 +11,7 @@
     <DashBoard/>
   </div>
 </template>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script>
 import DashBoard from './components/DashBoard.vue';
 
@@ -47,12 +47,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-
+  color: #FFFF;
 }
 
 body {
-  background-color: rgb(18, 0, 39);
+  background-color: rgb(30, 33, 41);
 }
 
 </style>

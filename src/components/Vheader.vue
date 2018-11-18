@@ -60,7 +60,7 @@ export default {
           this.errors.push(e);
         })
 
-        setTimeout(this.getStreamers, 60000);
+        setTimeout(this.getStreamers, this.$parent.timeout);
       },
 
       getGames: function() { 
@@ -70,7 +70,7 @@ export default {
             this.gameList.push(element['name']);
           });
         })
-        setTimeout(this.getGames, 60000);
+        setTimeout(this.getGames, this.$parent.timeout);
       }
     }
 }
