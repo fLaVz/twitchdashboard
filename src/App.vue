@@ -11,18 +11,16 @@
     <DashBoard/>
   </div>
 </template>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script>
 import DashBoard from './components/DashBoard.vue';
 
-var $displayform = true;
 
 export default {
   name: 'app',
   data() {
     return {
       arrow: "<",
-      displayform: $displayform
+      displayform: true
     }
   },
   components: {
