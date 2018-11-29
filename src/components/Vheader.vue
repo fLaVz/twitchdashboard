@@ -86,10 +86,10 @@ export default {
 }
 .marquee ul {
     padding-left: 100%;
-    animation: marquee 30s linear infinite;
+    animation: marquee 45s linear infinite;
 }
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
-    100% { transform: translate(-180%, 0); }
+    100% { transform: translate(-190%, 0); }
 }
 </style>

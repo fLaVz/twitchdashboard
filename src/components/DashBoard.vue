@@ -42,7 +42,6 @@ export default {
             userid: '',
             username: '',
             json: {},
-            arrow: "<",
             viewersdata: [],
             isLive: false,
             minutes: [],

@@ -4,7 +4,7 @@
       <a class="navbar-brand" href="#">TwitchDashboard</a>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <button @click="esc()" class="nav-link btn btn-primary pr-3 pl-3"> {{ arrow }} </button>
+          <button v-if="!this.displayform" @click="esc()" class="nav-link btn btn-primary pr-3 pl-3"> {{ arrow }} </button>
         </li>
       </ul>
     </nav>

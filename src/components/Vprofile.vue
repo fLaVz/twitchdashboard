@@ -15,6 +15,8 @@
                 <p v-if="this.$parent.isLive" class="card-text">
                     {{ this.livedata['title'] }}
                 </p>
+            </div>
+            <div class="card-footer">
                 <a v-bind:href="userlink" target="_blank" class="btn btn-primary">Channel</a>
             </div>
         </div>
