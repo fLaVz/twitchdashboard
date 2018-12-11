@@ -1,6 +1,7 @@
 # twitchdashboard
 
 > a simple twitch dashboard
+[Temp Demo](https://flavz.github.io/twitchdashboard/)
 
 ## Build Setup
 
