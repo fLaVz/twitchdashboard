@@ -1,7 +1,7 @@
 # twitchdashboard
 
 > a simple twitch dashboard.  
-<a href="https://flavz.github.io/twitchdashboard/" target="_blank">Temp Demo</a>
+<a href="https://flavz.github.io/twitchdashboard/" target="blank">Temp Demo</a>
 
 ## Build Setup
 
